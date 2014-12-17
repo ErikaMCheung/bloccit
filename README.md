@@ -4,11 +4,13 @@
 
 Made with my mentro at [BLOC](http://bloc.io)
 
-###Heroku App Name: erikamcbloccit
+###Heroku App Name: erikamc-bloccit
 
 To access the website go to: 
 
 https://erikamc-bloccit.herokuapp.com/
+
+------------------------------
 
 Things you may want to cover:
 
