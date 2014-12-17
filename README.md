@@ -4,6 +4,12 @@
 
 Made with my mentro at [BLOC](http://bloc.io)
 
+###Heroku App Name: erikamcbloccit
+
+To access the website go to: 
+
+https://erikamc-bloccit.herokuapp.com/
+
 Things you may want to cover:
 
 * Ruby version
