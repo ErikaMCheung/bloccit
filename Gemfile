@@ -7,10 +7,9 @@ end
 
 
 group :development do 
-  gem 'sqlite3'
+gem 'sqlite3'
 end
-#Develop data automatically
-gem 'faker'
+
 #Boostrap CSS framework 
 gem 'bootstrap-sass', '~> 3.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -35,6 +34,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+#Develop data automatically
+gem 'faker'
+#Used for user authentication
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
