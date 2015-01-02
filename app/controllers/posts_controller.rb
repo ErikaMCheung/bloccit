@@ -28,7 +28,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-# This is the controller for allowing a user to change the post information and notifying them that the post has been changed.
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params.require(:post).permit(:title, :body))
