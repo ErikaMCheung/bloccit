@@ -39,6 +39,8 @@ gem 'spring',        group: :development
 gem 'faker'
 #Used for user authentication
 gem 'devise'
+  gem 'pundit'
+  
 #Manage sensitive data with environment variables
 gem 'figaro', '1.0'
 
