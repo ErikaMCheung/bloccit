@@ -19,9 +19,8 @@ class PostsController < ApplicationController
 # This is the controller for creating posts.
   def create
     @topic = Topic.find(params[:topic_id])
-    @post = Post.new(params.require(:post).permit(:title, :body))
     @post = current_user.posts.build(post_params)
-    @post = Post.new(params.require(:post).permit(:title, :body))
+    @post.topic = @topic
     authorize @post
     
     if @post.save
@@ -29,6 +28,7 @@ class PostsController < ApplicationController
       redirect_to [@topic, @post]
     else
       flash[:error] = "There was an error saving the post. Please try again."
+      render :new
     end
   end
 
@@ -55,4 +55,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
+
 end
