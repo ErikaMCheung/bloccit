@@ -47,6 +47,17 @@ gem 'figaro', '1.0'
 #Allow posts and topics to user markdown
 gem 'redcarpet'
 
+#Allow the uploading of photographs
+gem 'carrierwave'
+
+#Allow users to edit photograph
+gem 'mini_magick'
+
+#Create a Cloud Services Library
+gem 'fog'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
