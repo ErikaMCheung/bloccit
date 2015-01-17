@@ -56,6 +56,8 @@ gem 'mini_magick'
 #Create a Cloud Services Library
 gem 'fog'
 
+#Creating pagination
+gem 'will_paginate', '~> 3.0.5'
 
 
 # Use ActiveModel has_secure_password
