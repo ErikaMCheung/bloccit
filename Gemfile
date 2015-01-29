@@ -3,6 +3,25 @@ source 'https://rubygems.org'
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
+
+#Used for user authentication
+gem 'devise'
+  gem 'pundit'
+  
+#Manage sensitive data with environment variables
+gem 'figaro', '1.0'
+
+#Allow posts and topics to user markdown
+gem 'redcarpet'
+
+#Allow the uploading of photographs
+gem 'carrierwave'
+
+#Allow users to edit photograph
+gem 'mini_magick'
+
+#Create a Cloud Services Library
+gem 'fog'
 end
 
 
@@ -37,6 +56,7 @@ gem 'spring',        group: :development
 
 #Develop data automatically
 gem 'faker'
+
 #Used for user authentication
 gem 'devise'
   gem 'pundit'
@@ -56,6 +76,9 @@ gem 'mini_magick'
 #Create a Cloud Services Library
 gem 'fog'
 
+#Better Errors for Debugging
+gem 'binding_of_caller'
+gem 'better_errors'
 
 
 # Use ActiveModel has_secure_password

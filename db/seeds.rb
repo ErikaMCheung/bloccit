@@ -28,6 +28,7 @@ require 'faker'
      description:  Faker::Lorem.paragraph
    )
  end
+
  topics = Topic.all
 
  
@@ -41,19 +42,20 @@ require 'faker'
 
 # Create Posts
  50.times do  
-  Post.create!(
-      user: users.sample,
-      topic: topics.sample,
+  post = Post.create!(
+    user: users.sample,
+    topic: topics.sample,
     title: Faker::Lorem.sentence,
     body: Faker::Lorem.paragraph
     )
 end
+
 posts = Post.all
 
 # Create Comments
 100.times do 
   Comment.create!(
-    # user: users.sample, # we have not yet associated Users with Comments
+  user: users.sample, 
   post: posts.sample,
   body: Faker::Lorem.paragraph
   )
@@ -90,7 +92,8 @@ end
 
 
 puts "Seed finished"
-puts "#{Post.count} post created"
+puts "#{User.count} users created"
+puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 
 

@@ -8,12 +8,13 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
+    @comments = @post.comments
   end
 
   def new
     @topic = Topic.find(params[:topic_id])
     @post = Post.new
-      authorize @post
+    authorize @post
   end
 
 # This is the controller for creating posts.
