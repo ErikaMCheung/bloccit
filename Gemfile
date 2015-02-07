@@ -76,14 +76,13 @@ gem 'mini_magick'
 #Create a Cloud Services Library
 gem 'fog'
 
-<<<<<<< HEAD
 #Creating pagination
 gem 'will_paginate', '~> 3.0.5'
-=======
+
 #Better Errors for Debugging
 gem 'binding_of_caller'
 gem 'better_errors'
->>>>>>> comments
+
 
 
 # Use ActiveModel has_secure_password
