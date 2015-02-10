@@ -3,31 +3,21 @@ source 'https://rubygems.org'
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
-
-#Used for user authentication
-gem 'devise'
-  gem 'pundit'
-  
-#Manage sensitive data with environment variables
-gem 'figaro', '1.0'
-
-#Allow posts and topics to user markdown
-gem 'redcarpet'
-
-#Allow the uploading of photographs
-gem 'carrierwave'
-
-#Allow users to edit photograph
-gem 'mini_magick'
-
-#Create a Cloud Services Library
-gem 'fog'
 end
 
 
 group :development do 
-gem 'sqlite3'
+  gem 'sqlite3'
+  #Better Errors for Debugging
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
+
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0',          group: :doc
+
 
 #Boostrap CSS framework 
 gem 'bootstrap-sass', '~> 3.1.1'
@@ -48,11 +38,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 #Develop data automatically
 gem 'faker'
@@ -79,9 +64,10 @@ gem 'fog'
 #Creating pagination
 gem 'will_paginate', '~> 3.0.5'
 
-#Better Errors for Debugging
-gem 'binding_of_caller'
-gem 'better_errors'
+
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
 
 
 
