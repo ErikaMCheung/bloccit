@@ -50,6 +50,7 @@ require 'faker'
     )
 
   post.update_attributes!(created_at: rand(10.minutes).ago)
+    post.create_vote
   post.update_rank
 end
 
