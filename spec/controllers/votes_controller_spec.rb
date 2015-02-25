@@ -29,4 +29,4 @@ describe VotesController do
       end
     end
   end
-end
+end 
